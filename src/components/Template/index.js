@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Sidebar from '../Sidebar'
+import logo from '../../assets/logo192.png'
 
 export default class Template extends Component {
   render() {
@@ -8,7 +9,7 @@ export default class Template extends Component {
         <nav className='bg-gray-800 text-white p-2'>
           <div className='float-right'>
             <div className='flex items-center'>
-              <img src='logo192.png' className='h-10 rounded-full'/>
+              <img src={logo} alt='Foto do usuário' className='h-10 rounded-full'/>
               <h6 className='pl-2'>Leonardo</h6>
             </div>
           </div>
@@ -21,7 +22,9 @@ export default class Template extends Component {
           </div>
         </div>
         <footer className='bg-gray-900 text-white'>
-          Desenvolvido por Leonardo Dick Bernardes
+          <h2 className='text-center'>
+            Desenvolvido por Leonardo Dick Bernardes
+          </h2>
         </footer>
       </div>
     )

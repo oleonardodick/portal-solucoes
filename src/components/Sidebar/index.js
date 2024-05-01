@@ -1,30 +1,27 @@
 import React, { useState } from 'react';
 import Tooltip from '../Tooltip';
 import {Bars, Apoio, Evolucao, Garantia} from '../Icons';
+import { Link } from 'react-router-dom';
 
 
 const Sidebar = () => {
     const [isSideBarOpen, setIsSideBarOpen] = useState(false);
     const [hasItemSelected, setHasItemSelected] = useState(false);
+    const [selectedItem, setSelectedItem] = useState(null);
 
     const toogleSidebar = () =>{
         setIsSideBarOpen(!isSideBarOpen);
     }
-    const [selectedItem, setSelectedItem] = useState(null);
 
     const handleItemClick = (item) => {
-        setHasItemSelected(item != selectedItem || !hasItemSelected);
+        setHasItemSelected(item !== selectedItem || !hasItemSelected);
         setSelectedItem(item)
     }
 
-    const handleSubitemClick = (subitem) =>{
-        //lidar com o click do subitem
-    }
-
     return(
-        <div className='flex'>
+        <div className='flex absolute top-0 h-screen'>
             <div className={`${isSideBarOpen?'w-44':'w-12'} bg-gray-700 text-white shadow-lg p-2`}>
-                <div className='flex items-center mb-6'>
+                <div className='flex items-center mb-7'>
                     <button className="text-white mr-2 focus:outline-none" onClick={toogleSidebar}>
                         <Bars />
                     </button>
@@ -34,11 +31,11 @@ const Sidebar = () => {
                 <SideBarItem title='Evoluções' isSidebarOpen={isSideBarOpen} onClick={() => handleItemClick('Evoluções')}/>
                 <SideBarItem title='Garantias' isSidebarOpen={isSideBarOpen} onClick={() => handleItemClick('Garantias')}/>
             </div>
-            <div className={`w-32 bg-gray-400 shadow ${hasItemSelected?'':'hidden'}`}>          
+            <div className={`w-32 bg-gray-400 shadow ${hasItemSelected?'':'hidden'} text-center`}>          
                 <SubSideBar title = {selectedItem}>
-                    <SubSideBarItem title="Iniciados" onClick={() => handleSubitemClick('Iniciados')}/>
-                    <SubSideBarItem title="Pendentes" onClick={() => handleSubitemClick('Pendentes')}/>
-                    <SubSideBarItem title="Aguardando" onClick={() => handleSubitemClick('Aguardando')}/>
+                    <SubSideBarItem title="Iniciados" item={selectedItem}/>
+                    <SubSideBarItem title="Pendentes" item={selectedItem}/>
+                    <SubSideBarItem title="Aguardando" item={selectedItem}/>
                 </SubSideBar>
             </div>
         </div>
@@ -72,11 +69,14 @@ const SubSideBar = ({title, children}) => {
     );
 };
 
-const SubSideBarItem = ({title, onClick}) =>{
+const SubSideBarItem = ({title, item}) =>{
     return(
-        <div className='p-2 cursor-pointer hover:bg-gray-300' onClick={onClick}>
-            {title}
+        <div className='p-2 cursor-pointer hover:bg-gray-300'>
+            <Link to= {`../../${item}/${title.toLowerCase()}`}>
+                {title}
+            </Link>
         </div>
+
     );
 };
 

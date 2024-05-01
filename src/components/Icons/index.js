@@ -34,3 +34,23 @@ export const Garantia = () =>{
         <div dangerouslySetInnerHTML={{__html:svg}}/>
     )
 }
+
+export const Aguardando = () =>{
+    return(
+        <svg width="28px" height="28px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15 6H9M20 21H19M19 21H5M19 21C19 18.4898 17.7877 16.1341 15.7451 14.675L12 12M5 21H4M5 21C5 18.4898 6.21228 16.1341 8.25493 14.675L12 12M20 3H19M19 3H5M19 3C19 5.51022 17.7877 7.86592 15.7451 9.32495L12 12M5 3H4M5 3C5 5.51022 6.21228 7.86592 8.25493 9.32495L12 12" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+    )
+}
+
+export const Finalizar = () =>{
+    const svg = `<svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28px" height="28px" viewBox="0 0 32 32" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .linesandangles_een{fill:#111918;} </style> <path class="linesandangles_een" d="M6,6v20h20V6H6z M24,24H8V8h16V24z M15,20.414l-4.707-4.707l1.414-1.414L15,17.586l5.293-5.293 l1.414,1.414L15,20.414z"></path> </g></svg>`
+    return(
+       <div dangerouslySetInnerHTML={{__html:svg}}/>
+    )
+}
+
+export const Informacoes = () =>{
+    const svg = `<svg fill="#000000" height="28px" width="28px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g transform="translate(1 1)"> <g> <g> <path d="M331.8-1H178.2C112.493-1,58.733,52.76,58.733,118.467v153.6c0,65.707,53.76,119.467,119.467,119.467h28.16 c7.68,0,14.507,6.827,14.507,14.507v84.48c0,9.387,5.973,17.067,14.507,19.627C237.08,511,239.64,511,241.347,511 c6.827,0,12.8-3.413,17.067-8.533l52.053-74.24c13.653-20.48,34.133-34.987,58.027-42.667 c49.493-16.213,82.773-61.44,82.773-113.493v-153.6C451.267,52.76,397.507-1,331.8-1z M434.2,272.92 c0,44.373-28.16,83.627-70.827,97.28c-27.307,9.387-50.347,25.6-66.56,48.64l-52.907,74.24c-0.853,1.707-2.56,0.853-3.413,0.853 c-0.853-0.853-2.56-0.853-2.56-3.413v-84.48c0-17.067-14.507-31.573-31.573-31.573H178.2c-56.32,0-102.4-46.08-102.4-102.4 v-153.6c0-56.32,46.08-102.4,102.4-102.4h153.6c56.32,0,102.4,46.08,102.4,102.4V272.92z"></path> <path d="M297.667,289.133h-8.533v-128c0-14.507-11.093-25.6-25.6-25.6H229.4c-14.507,0-25.6,11.093-25.6,25.6 c0,14.507,11.093,25.6,25.6,25.6h8.533v102.4H229.4c-14.507,0-25.6,11.093-25.6,25.6c0,14.507,11.093,25.6,25.6,25.6h68.267 c14.507,0,25.6-11.093,25.6-25.6C323.267,300.227,312.173,289.133,297.667,289.133z M297.667,323.267H229.4 c-5.12,0-8.533-3.413-8.533-8.533s3.413-8.533,8.533-8.533h17.067c5.12,0,8.533-3.413,8.533-8.533V178.2 c0-5.12-3.413-8.533-8.533-8.533H229.4c-5.12,0-8.533-3.413-8.533-8.533s3.413-8.533,8.533-8.533h34.133 c4.267,0,8.533,3.413,8.533,8.533v136.533c0,5.12,3.413,8.533,8.533,8.533h17.067c5.12,0,8.533,3.413,8.533,8.533 S302.787,323.267,297.667,323.267z"></path> <path d="M255,118.467c18.773,0,34.133-15.36,34.133-34.133c0-18.773-15.36-34.133-34.133-34.133s-34.133,15.36-34.133,34.133 C220.867,103.107,236.227,118.467,255,118.467z M255,67.267c9.387,0,17.067,7.68,17.067,17.067 c0,9.387-7.68,17.067-17.067,17.067c-9.387,0-17.067-7.68-17.067-17.067C237.933,74.947,245.613,67.267,255,67.267z"></path> </g> </g> </g> </g></svg>`
+    return(
+        <div dangerouslySetInnerHTML={{__html:svg}}/>
+    )
+}

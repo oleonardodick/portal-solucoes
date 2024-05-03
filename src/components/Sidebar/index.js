@@ -71,8 +71,8 @@ const SubSideBar = ({title, children}) => {
 
 const SubSideBarItem = ({title, item}) =>{
     return(
-        <div className='p-2 cursor-pointer hover:bg-gray-300'>
-            <Link to= {`../../${item}/${title.toLowerCase()}`}>
+        <div className='py-2 cursor-pointer hover:bg-gray-300'>
+            <Link to= {`../../${item}/${title.toLowerCase()}`} className='flex justify-center'>
                 {title}
             </Link>
         </div>

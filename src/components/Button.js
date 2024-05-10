@@ -8,17 +8,17 @@ const BotaoBase = ({children, classeUnica, onClick}) =>{
     )
 }
 
-export const BotaoPrimario = ({texto, onClick}) =>{
+export const BotaoPrimario = ({texto, onClick, largura}) =>{
     return(
-        <BotaoBase classeUnica="bg-blue-500 hover:bg-blue-600" onClick={onClick}>
+        <BotaoBase classeUnica={`bg-blue-500 hover:bg-blue-600 ${largura?largura:''}`} onClick={onClick}>
             {texto}
         </BotaoBase>
     )
 }
 
-export const BotaoSucesso = ({texto, onClick}) =>{
+export const BotaoSucesso = ({texto, onClick, largura}) =>{
     return(
-        <BotaoBase classeUnica="bg-green-500 hover:bg-green-600" onClick={onClick}>
+        <BotaoBase classeUnica={`bg-green-500 hover:bg-green-600 ${largura?{largura}:''}`} onClick={onClick}>
             {texto}
         </BotaoBase>
 

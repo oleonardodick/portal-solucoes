@@ -1,28 +1,94 @@
 {
-    "apoiosPendentes":[
-        {
-            "numero":504120,
-            "cliente": "Volvo",
-            "item":{
-                "numero":4,
-                "solicitado": "Exemplo de solicitado de um item de ordem de serviço alterado para ver se vai mudar na modal",
-                "atividade":{
-                    "codigo":"AS1",
-                    "observacao": "Exemplo de uma observação em uma atividade da OS"
-                }
-            }
-        },
-        {
-            "numero":512210,
-            "cliente": "Stefanello",
-            "item":{
-                "numero":140,
-                "solicitado": "Solicitado da OS",
-                "atividade":{
-                    "codigo":"AS1",
-                    "observacao": "Aqui ficará a observação da atividade"
-                }
-            }
-        }
-    ]
+  "atividades": [
+    {
+      "id": "5410233",
+      "numero": 541023,
+      "item": 3,
+      "cliente": "Stefanello",
+      "responsavel": "Maria Cláudia",
+      "dataCriacao": "01/03/2024",
+      "situacao": "P",
+      "valorNegocio": 99,
+      "solicitado": "Solicitado da OS",
+      "observacao": "Observacao da OS",
+      "atendente": "",
+      "aguardandoDesde": "",
+      "motivoAguardando": ""
+    },
+    {
+      "id": "56221440",
+      "numero": 562214,
+      "item": 40,
+      "cliente": "Volvo",
+      "responsavel": "João da Silva",
+      "dataCriacao": "29/04/2024",
+      "situacao": "I",
+      "valorNegocio": 99,
+      "solicitado": "Solicitado da OS 2",
+      "observacao": "Observacao da OS 2",
+      "atendente": "Leonardo Bernardes",
+      "aguardandoDesde": "",
+      "motivoAguardando": ""
+    },
+    {
+      "id": "5410101",
+      "numero": 541010,
+      "item": 1,
+      "cliente": "Stefanello",
+      "responsavel": "Maria Cláudia",
+      "dataCriacao": "01/03/2024",
+      "situacao": "A",
+      "valorNegocio": 80,
+      "solicitado": "Solicitado da OS 3",
+      "observacao": "Observacao da OS 3",
+      "atendente": "",
+      "aguardandoDesde": "02/03/2024",
+      "motivoAguardando": "Teste motivo aguardando"
+    },
+    {
+      "id": "5160144",
+      "numero": 516014,
+      "item": 4,
+      "cliente": "Stefanello",
+      "responsavel": "Maria Cláudia",
+      "dataCriacao": "03/03/2024",
+      "situacao": "A",
+      "valorNegocio": 70,
+      "solicitado": "Solicitado da OS 4",
+      "observacao": "Observacao da OS 4",
+      "atendente": "",
+      "aguardandoDesde": "03/03/2024",
+      "motivoAguardando": "Teste motivo aguardando 2"
+    },
+    {
+      "id": "58234110",
+      "numero": 582341,
+      "item": 10,
+      "cliente": "Volvo",
+      "responsavel": "Marcos Aurelio",
+      "dataCriacao": "01/03/2024",
+      "situacao": "P",
+      "valorNegocio": 75,
+      "solicitado": "Solicitado da OS 5",
+      "observacao": "Observacao da OS 5",
+      "atendente": "",
+      "aguardandoDesde": "",
+      "motivoAguardando": ""
+    },
+    {
+      "id": "58234111",
+      "numero": 582341,
+      "item": 11,
+      "cliente": "Volvo",
+      "responsavel": "Marcos Aurelio",
+      "dataCriacao": "01/03/2024",
+      "situacao": "P",
+      "valorNegocio": 75,
+      "solicitado": "Solicitado da OS 6",
+      "observacao": "Observacao da OS 6",
+      "atendente": "",
+      "aguardandoDesde": "",
+      "motivoAguardando": ""
+    }
+  ]
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Tooltip from "../Tooltip";
+import Tooltip from "./Tooltip";
 
 const Tabela = ({cabecalho, elementos, botoesAcao}) =>{
     const pageSize = 5;

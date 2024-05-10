@@ -4,7 +4,7 @@ import Tabela from "../../components/Table";
 import { Iniciar, Informacoes } from "../../components/Icons";
 import Modal from "../../components/Modal";
 import apoioRepository from "../../repositories/apoio"
-import { BotaoPrimario, BotaoSucesso } from "../../components/Button";
+import { BotaoPrimario } from "../../components/Button";
 
 export const ApoiosPendentes = () =>{
     const [dadosApoios, setDadosApoios] = useState([]);
@@ -16,18 +16,18 @@ export const ApoiosPendentes = () =>{
         apoioRepository.getApoiosPendentes()
         .then((apoios) =>{
             const dadosDoApoio = apoios.map(apoio =>({
-                numero: apoio.numero,
+                numero:apoio.numero + '/' + apoio.item,
                 cliente: apoio.cliente,
-                valorNegocio: 99,
-                data:'01/05/2024',
-                responsavel: 'Maria Eduarda',
+                valorNegocio: apoio.valorNegocio,
+                data:apoio.dataCriacao,
+                responsavel: apoio.responsavel,
             }));
             setDadosApoios(dadosDoApoio)
 
             const infosDoApoio = apoios.map(apoio =>({
-                numero:apoio.numero,
-                solicitado:apoio.item.solicitado,
-                observacao:apoio.item.atividade.observacao
+                numero:apoio.numero + '/' + apoio.item,
+                solicitado:apoio.solicitado,
+                observacao:apoio.observacao
             }));
 
             setInfoApoios(infosDoApoio)
@@ -38,8 +38,18 @@ export const ApoiosPendentes = () =>{
         });
     },[])
 
-    const iniciarApoio = (item) =>{
-        alert(`Deseja realmente iniciar o apoio da OS ${item[0]}?`)
+    const iniciarApoio = async (item) =>{
+        const resposta = window.confirm(`Deseja realmente iniciar o apoio da OS ${item.numero}?`);
+        if(resposta){
+            const OS = item.numero.split('/');
+            item.numero = OS[0];
+            item.item = OS[1];
+            item.atendente = "Leonardo Bernardes"
+            const response = await  apoioRepository.iniciaApoioPendente(item);
+            if(response === 200){
+                setDadosApoios(dadosApoios.filter((apoio) => apoio.numero !== item.numero && apoio.item !== item.item));
+            }
+        }
     }
 
     const maisInformacoes = (item) =>{

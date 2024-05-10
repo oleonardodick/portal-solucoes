@@ -14,8 +14,8 @@ const Tooltip = ({text, isVisible, children}) => {
           </div>
           {showTooltip && isVisible && (
             <div
-              className="absolute bg-gray-800 text-white text-xs py-1 px-2 rounded whitespace-nowrap"
-              style={{ top: '-2rem', left: '50%', transform: 'translateX(-50%)'}}
+              className="absolute bg-gray-800 text-white text-xs py-1 px-2 rounded"
+              style={{ top: '-2rem', left: '60%', transform: 'translateX(-50%)'}}
             >
               {text}
             </div>

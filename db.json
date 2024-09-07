@@ -1,5 +1,114 @@
 {
-  "posts": [{ "id": 1, "title": "json-server edited", "author": "typicode" }],
-  "comments": [{ "id": 1, "body": "some comment edited", "postId": 1 }],
-  "profile": { "name": "typicode" }
+  "ordensDeServico": [
+    {
+      "numero": 543102,
+      "item": "1",
+      "cliente": "Cliente ABCD",
+      "solicitado": "Solicitado da OS 543102/1",
+      "tipo": "2",
+      "atividade": {
+        "responsavel": "Maria Souza",
+        "status": "P"
+      }
+    },
+    {
+      "numero": 543103,
+      "item": "2",
+      "cliente": "Cliente EFGH",
+      "solicitado": "Solicitado da OS 543103/2",
+      "tipo": "2",
+      "atividade": {
+        "responsavel": "Carlos Silva",
+        "status": "A"
+      }
+    },
+    {
+      "numero": 543104,
+      "item": "3",
+      "cliente": "Cliente IJKL",
+      "solicitado": "Solicitado da OS 543104/3",
+      "tipo": "P",
+      "atividade": {
+        "responsavel": "Ana Costa",
+        "status": "A"
+      }
+    },
+    {
+      "numero": 543105,
+      "item": "1",
+      "cliente": "Cliente MNOP",
+      "solicitado": "Solicitado da OS 543105/1",
+      "tipo": "P",
+      "atividade": {
+        "responsavel": "João Lima",
+        "status": "I"
+      }
+    },
+    {
+      "numero": 543106,
+      "item": "2",
+      "cliente": "Cliente QRST",
+      "solicitado": "Solicitado da OS 543106/2",
+      "tipo": "P",
+      "atividade": {
+        "responsavel": "Beatriz Souza",
+        "status": "P"
+      }
+    },
+    {
+      "numero": 543107,
+      "item": "3",
+      "cliente": "Cliente UVWX",
+      "solicitado": "Solicitado da OS 543107/3",
+      "tipo": "2",
+      "atividade": {
+        "responsavel": "Ricardo Oliveira",
+        "status": "P"
+      }
+    },
+    {
+      "numero": 543108,
+      "item": "1",
+      "cliente": "Cliente YZAB",
+      "solicitado": "Solicitado da OS 543108/1",
+      "tipo": "2",
+      "atividade": {
+        "responsavel": "Fernanda Costa",
+        "status": "P"
+      }
+    },
+    {
+      "numero": 543109,
+      "item": "2",
+      "cliente": "Cliente CDEF",
+      "solicitado": "Solicitado da OS 543109/2",
+      "tipo": "P",
+      "atividade": {
+        "responsavel": "Luiz Pereira",
+        "status": "A"
+      }
+    },
+    {
+      "numero": 543110,
+      "item": "3",
+      "cliente": "Cliente GHIJ",
+      "solicitado": "Solicitado da OS 543110/3",
+      "tipo": "2",
+      "atividade": {
+        "responsavel": "Mariana Lopes",
+        "status": "A"
+      }
+    },
+    {
+      "numero": 543111,
+      "item": "1",
+      "cliente": "Cliente KLMN",
+      "solicitado": "Solicitado da OS 543111/1",
+      "tipo": "2",
+      "atividade": {
+        "responsavel": "José Santos",
+        "status": "A"
+      }
+    }
+  ]
 }

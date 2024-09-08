@@ -7,6 +7,7 @@ export async function getApoiosPendentes() {
   const response = await axios.get(URL_APOIOS, {
     params: {
       'atividade.status': 'P',
+      tipo: ['2', 'P'],
     },
   });
 

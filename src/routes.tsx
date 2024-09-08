@@ -5,6 +5,7 @@ import PaginaPadrao from './components/PaginaPadrao';
 import Rodape from './components/Rodape';
 import { Sidebar } from './components/BarraLateral';
 import ApoiosPendentes from './pages/apoios/Pendentes';
+import { ModalProvider } from './contexts/ModalContext';
 
 const queryClient = new QueryClient();
 
@@ -16,11 +17,16 @@ export default function AppRouter() {
         <section className="flex flex-1">
           <Sidebar />
           <QueryClientProvider client={queryClient}>
-            <section className="text-zinc-700 w-full">
-              <Routes>
-                <Route path="/" element={<PaginaPadrao />} />
-                <Route path="/apoios/pendentes" element={<ApoiosPendentes />} />
-              </Routes>
+            <section className="text-black w-full bg-gray-100">
+              <ModalProvider>
+                <Routes>
+                  <Route path="/" element={<PaginaPadrao />} />
+                  <Route
+                    path="/apoios/pendentes"
+                    element={<ApoiosPendentes />}
+                  />
+                </Routes>
+              </ModalProvider>
             </section>
           </QueryClientProvider>
         </section>

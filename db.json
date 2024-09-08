@@ -8,7 +8,8 @@
       "tipo": "2",
       "atividade": {
         "responsavel": "Maria Souza",
-        "status": "P"
+        "status": "P",
+        "observacao": "Texto da observação da OS, que pode ter algo ou não."
       }
     },
     {
@@ -19,7 +20,8 @@
       "tipo": "2",
       "atividade": {
         "responsavel": "Carlos Silva",
-        "status": "A"
+        "status": "A",
+        "observacao": "Texto da observação da OS, que pode ter algo ou não."
       }
     },
     {
@@ -41,7 +43,8 @@
       "tipo": "P",
       "atividade": {
         "responsavel": "João Lima",
-        "status": "I"
+        "status": "I",
+        "observacao": "Texto da observação da OS, que pode ter algo ou não."
       }
     },
     {
@@ -74,7 +77,8 @@
       "tipo": "2",
       "atividade": {
         "responsavel": "Fernanda Costa",
-        "status": "P"
+        "status": "P",
+        "observacao": "Texto da observação da OS, que pode ter algo ou não. As vezes pode ser um texto grande"
       }
     },
     {

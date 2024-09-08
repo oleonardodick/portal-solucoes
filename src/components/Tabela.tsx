@@ -2,7 +2,7 @@ import { ComponentProps, ReactNode } from 'react';
 
 export function Tabela({ children }: { children: ReactNode }) {
   return (
-    <table className="w-full text-center border border-zinc-400">
+    <table className="w-full text-center border border-zinc-400 bg-gray-200">
       {children}
     </table>
   );
@@ -31,7 +31,11 @@ type TableRowProps = ComponentProps<'tr'> & {
 };
 
 export function LinhaTabela({ children, ...props }: TableRowProps) {
-  return <tr {...props}>{children}</tr>;
+  return (
+    <tr {...props} className="odd:bg-gray-50">
+      {children}
+    </tr>
+  );
 }
 
 type TableCellProps = ComponentProps<'td'> & {
@@ -40,7 +44,7 @@ type TableCellProps = ComponentProps<'td'> & {
 
 export function CelulaTabela({ children, ...props }: TableCellProps) {
   return (
-    <td {...props} className="px-4 py-2 border border-zinc-400">
+    <td {...props} className="px-4 py-3">
       {children}
     </td>
   );

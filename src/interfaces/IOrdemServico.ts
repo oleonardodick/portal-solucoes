@@ -10,4 +10,5 @@ export interface IOrdemServico {
 export interface Atividade {
   responsavel: string;
   status: string;
+  observacao: string | undefined;
 }

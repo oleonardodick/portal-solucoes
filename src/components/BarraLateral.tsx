@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 export function Sidebar() {
   return (
     <>
-      <aside className="w-max bg-zinc-900 px-3 py-2">
+      <aside className="w-max bg-gray-700 px-3 py-2">
         <nav className="flex flex-col">
           <ul className="flex flex-col gap-2">
             <SidebarItem Icone={Headset} texto="Apoios">
@@ -53,7 +53,7 @@ function SidebarItem({ Icone, texto, children }: SidebarItemType) {
   return (
     <>
       <li
-        className="flex gap-3 items-center hover:bg-zinc-500 py-3 cursor-pointer font-bold text-lg"
+        className="flex gap-3 items-center hover:bg-gray-600 py-3 cursor-pointer font-bold text-lg"
         onClick={openItem}
       >
         <Icone width={35} height={35} />
@@ -67,9 +67,7 @@ function SidebarItem({ Icone, texto, children }: SidebarItemType) {
         </div>
       </li>
       {itemOpened && (
-        <ul className="flex flex-col gap-3 text-base bg-zinc-800">
-          {children}
-        </ul>
+        <ul className="flex flex-col gap-3 text-base">{children}</ul>
       )}
     </>
   );
@@ -82,7 +80,7 @@ interface SidebarSubItemType {
 
 function SideBarSubItem({ texto, pai }: SidebarSubItemType) {
   return (
-    <li className="hover:bg-zinc-500 p-2">
+    <li className="hover:bg-gray-600 p-2">
       <Link
         to={`/${pai}/${texto
           .toLowerCase()

@@ -6,6 +6,7 @@ import Rodape from './components/Rodape';
 import { Sidebar } from './components/BarraLateral';
 import ApoiosPendentes from './pages/apoios/Pendentes';
 import { ModalProvider } from './contexts/ModalContext';
+import ApoiosIniciados from './pages/apoios/Iniciados';
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,10 @@ export default function AppRouter() {
                   <Route
                     path="/apoios/pendentes"
                     element={<ApoiosPendentes />}
+                  />
+                  <Route
+                    path="/apoios/iniciados"
+                    element={<ApoiosIniciados />}
                   />
                 </Routes>
               </ModalProvider>

@@ -11,4 +11,5 @@ export interface Atividade {
   responsavel: string;
   status: string;
   observacao: string | undefined;
+  tecnico: string;
 }

@@ -23,3 +23,23 @@ export async function getApoiosPendentes() {
 
   return dadosModificados;
 }
+
+export async function getApoiosIniciados() {
+  const response = await axios.get(URL_APOIOS, {
+    params: {
+      'atividade.status': 'I',
+      tipo: ['2', 'P'],
+    },
+  });
+
+  const dadosModificados = response.data.map((apoio: IOrdemServico) => {
+    if (apoio.tipo === '2') {
+      apoio.tipo = 'Implementação';
+    } else if (apoio.tipo === 'P') {
+      apoio.tipo = 'Suporte';
+    }
+    return apoio;
+  });
+
+  return dadosModificados;
+}

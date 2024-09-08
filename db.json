@@ -9,7 +9,8 @@
       "atividade": {
         "responsavel": "Maria Souza",
         "status": "P",
-        "observacao": "Texto da observação da OS, que pode ter algo ou não."
+        "observacao": "Texto da observação da OS, que pode ter algo ou não.",
+        "tecnico": ""
       }
     },
     {
@@ -21,7 +22,8 @@
       "atividade": {
         "responsavel": "Carlos Silva",
         "status": "A",
-        "observacao": "Texto da observação da OS, que pode ter algo ou não."
+        "observacao": "Texto da observação da OS, que pode ter algo ou não.",
+        "tecnico": "Marco Antonio"
       }
     },
     {
@@ -32,7 +34,8 @@
       "tipo": "P",
       "atividade": {
         "responsavel": "Ana Costa",
-        "status": "A"
+        "status": "A",
+        "tecnico": "Rodrigo Da Silva"
       }
     },
     {
@@ -44,7 +47,8 @@
       "atividade": {
         "responsavel": "João Lima",
         "status": "I",
-        "observacao": "Texto da observação da OS, que pode ter algo ou não."
+        "observacao": "Texto da observação da OS, que pode ter algo ou não.",
+        "tecnico": "Rodrigo Da Silva"
       }
     },
     {
@@ -55,7 +59,8 @@
       "tipo": "P",
       "atividade": {
         "responsavel": "Beatriz Souza",
-        "status": "P"
+        "status": "P",
+        "tecnico": ""
       }
     },
     {
@@ -66,7 +71,8 @@
       "tipo": "2",
       "atividade": {
         "responsavel": "Ricardo Oliveira",
-        "status": "P"
+        "status": "P",
+        "tecnico": ""
       }
     },
     {
@@ -78,7 +84,8 @@
       "atividade": {
         "responsavel": "Fernanda Costa",
         "status": "P",
-        "observacao": "Texto da observação da OS, que pode ter algo ou não. As vezes pode ser um texto grande"
+        "observacao": "Texto da observação da OS, que pode ter algo ou não. As vezes pode ser um texto grande",
+        "tecnico": ""
       }
     },
     {
@@ -89,7 +96,8 @@
       "tipo": "P",
       "atividade": {
         "responsavel": "Luiz Pereira",
-        "status": "A"
+        "status": "I",
+        "tecnico": "João Pedro"
       }
     },
     {
@@ -100,7 +108,8 @@
       "tipo": "2",
       "atividade": {
         "responsavel": "Mariana Lopes",
-        "status": "A"
+        "status": "A",
+        "tecnico": "João Pedro"
       }
     },
     {
@@ -111,7 +120,8 @@
       "tipo": "2",
       "atividade": {
         "responsavel": "José Santos",
-        "status": "A"
+        "status": "A",
+        "tecnico": "Carlos Alberto"
       }
     }
   ]

@@ -1,12 +1,7 @@
-import { Info, Play } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
-import { getApoiosPendentes } from '@/services/apoio';
+import { getApoiosIniciados } from '@/services/apoio';
 import { IOrdemServico } from '@/interfaces/IOrdemServico';
-import { useContext, useRef, useState } from 'react';
-import { ModalContext } from '@/contexts/ModalContext';
-import { ApoioModal } from './Modais/ApoioModal';
-import { ShadTooltipProvider } from '@/components/ui/shadtooltip';
-import Tooltip from '@/components/Tooltip';
+import { useRef, useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import {
@@ -19,25 +14,27 @@ import {
   PaginationPrevious,
 } from '@/components/ui/pagination';
 import { TabelaApoios } from './TabelaApoios';
+import { ShadTooltipProvider } from '@/components/ui/shadtooltip';
+import Tooltip from '@/components/Tooltip';
+import { CircleCheck, Hourglass } from 'lucide-react';
 
-interface ApoiosPendentesProps {
+interface ApoiosIniciadosProps {
   numero: number;
   item: string;
   cliente: string;
+  tecnico: string;
   responsavel: string;
   observacao: string | undefined;
   tipo: string;
 }
 
-export default function Pendente() {
-  const { openModal, isOpen } = useContext(ModalContext);
-  const [osSelecionada, setOsSelecionada] = useState<IOrdemServico>();
+export default function Iniciados() {
   const inputPesquisaRef = useRef<HTMLInputElement>(null);
   const [termoPesquisa, setTermoPesquisa] = useState('');
 
   const { data: ordemServicoResponse, isLoading } = useQuery<IOrdemServico[]>({
-    queryKey: ['apoiosPendentes'],
-    queryFn: getApoiosPendentes,
+    queryKey: ['apoiosIniciados'],
+    queryFn: getApoiosIniciados,
   });
 
   const dadosFiltrados = ordemServicoResponse
@@ -51,6 +48,7 @@ export default function Pendente() {
       numero: item.numero,
       item: item.item,
       cliente: item.cliente,
+      tecnico: item.atividade.tecnico,
       responsavel: item.atividade.responsavel,
       observacao: item.atividade.observacao,
       tipo: item.tipo,
@@ -60,25 +58,19 @@ export default function Pendente() {
     'OS',
     'Item',
     'Cliente',
+    'Técnico',
     'Responsável',
     'Observação',
     'Tipo',
     '',
   ];
 
-  const handleIniciar = (ordemServico: ApoiosPendentesProps) => {
-    alert('Iniciar' + ordemServico.numero + ordemServico.item);
+  const handleFinalizar = (ordemServico: ApoiosIniciadosProps) => {
+    alert('Finalizar' + ordemServico.numero + '/' + ordemServico.item);
   };
 
-  const handleInfo = (ordemServico: ApoiosPendentesProps) => {
-    const os = ordemServicoResponse?.filter(
-      (item) =>
-        item.numero === ordemServico.numero && item.item === ordemServico.item
-    );
-    if (os) {
-      setOsSelecionada(os[0]);
-      openModal();
-    }
+  const handleAguardar = (ordemServico: ApoiosIniciadosProps) => {
+    alert('Aguardar' + ordemServico.numero + '/' + ordemServico.item);
   };
 
   const handlePesquisar = () => {
@@ -86,24 +78,24 @@ export default function Pendente() {
     setTermoPesquisa(textoPesquisado);
   };
 
-  const renderActions = (ordemServico: ApoiosPendentesProps) => (
+  const renderActions = (ordemServico: ApoiosIniciadosProps) => (
     <ShadTooltipProvider>
-      <Tooltip texto="Iniciar Apoio">
+      <Tooltip texto="Finalizar Apoio">
         <Button
           size="icon"
           variant="ghost"
-          onClick={() => handleIniciar(ordemServico)}
+          onClick={() => handleFinalizar(ordemServico)}
         >
-          <Play />
+          <CircleCheck />
         </Button>
       </Tooltip>
-      <Tooltip texto="Mais informações">
+      <Tooltip texto="Passar para aguardando">
         <Button
           size="icon"
           variant="ghost"
-          onClick={() => handleInfo(ordemServico)}
+          onClick={() => handleAguardar(ordemServico)}
         >
-          <Info />
+          <Hourglass />
         </Button>
       </Tooltip>
     </ShadTooltipProvider>
@@ -127,12 +119,11 @@ export default function Pendente() {
         </Button>
       </section>
       <div>
-        <TabelaApoios<ApoiosPendentesProps>
+        <TabelaApoios<ApoiosIniciadosProps>
           colunas={columns}
           dados={dadosFiltrados || []}
           renderActions={renderActions}
         />
-        {isOpen && osSelecionada && <ApoioModal OS={osSelecionada} />}
 
         <Pagination className="justify-end">
           <PaginationContent>

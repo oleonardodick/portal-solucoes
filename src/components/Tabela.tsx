@@ -32,7 +32,7 @@ type TableRowProps = ComponentProps<'tr'> & {
 
 export function LinhaTabela({ children, ...props }: TableRowProps) {
   return (
-    <tr {...props} className="odd:bg-gray-50">
+    <tr {...props} className="odd:bg-gray-50 hover:bg-gray-300">
       {children}
     </tr>
   );

@@ -4,10 +4,10 @@ import {
   CabecalhoModal,
   TituloModal,
   ConteudoModal,
-} from '../../components/Modal';
+} from '@/components/Modal';
 import { useContext } from 'react';
-import { IOrdemServico } from '../../interfaces/IOrdemServico';
-import { ModalContext } from '../../contexts/ModalContext';
+import { IOrdemServico } from '@/interfaces/IOrdemServico';
+import { ModalContext } from '@/contexts/ModalContext';
 
 export function ApoioModal({ OS }: { OS: IOrdemServico }) {
   const { closeModal } = useContext(ModalContext);

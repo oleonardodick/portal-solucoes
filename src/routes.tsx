@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Menu from './components/Menu';
-import PaginaPadrao from './components/PaginaPadrao';
+import PaginaInicial from './pages/inicio/PaginaInicial';
 import Rodape from './components/Rodape';
 import { Sidebar } from './components/BarraLateral';
 import ApoiosPendentes from './pages/apoios/Pendentes';
@@ -20,7 +20,7 @@ export default function AppRouter() {
             <section className="text-black w-full bg-gray-100">
               <ModalProvider>
                 <Routes>
-                  <Route path="/" element={<PaginaPadrao />} />
+                  <Route path="/" element={<PaginaInicial />} />
                   <Route
                     path="/apoios/pendentes"
                     element={<ApoiosPendentes />}

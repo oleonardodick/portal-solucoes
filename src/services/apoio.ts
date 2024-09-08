@@ -1,3 +1,4 @@
+import { IOrdemServico } from '@/interfaces/IOrdemServico';
 import config from '../utils/config';
 import axios from 'axios';
 
@@ -11,5 +12,14 @@ export async function getApoiosPendentes() {
     },
   });
 
-  return response.data;
+  const dadosModificados = response.data.map((apoio: IOrdemServico) => {
+    if (apoio.tipo === '2') {
+      apoio.tipo = 'Implementação';
+    } else if (apoio.tipo === 'P') {
+      apoio.tipo = 'Suporte';
+    }
+    return apoio;
+  });
+
+  return dadosModificados;
 }
